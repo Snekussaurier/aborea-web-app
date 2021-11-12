@@ -128,6 +128,12 @@
 .App-sidenav-btn4:hover{
   background-color: var(--4);
 }
+.App-sidenav-btn5{
+  color: var(--5);
+}
+.App-sidenav-btn5:hover{
+  background-color: var(--5);
+}
 
 .App-sidenav-btn-icon {
   margin: 0px 22px;
@@ -143,22 +149,29 @@
   --7: #19bc8b;
 }
 
-.parallelogram {
-  width: 500px;
-  height: 60vh;
+.App-content-char {
   margin: auto;
-  align-self: center;
-  vertical-align: center;
-  background: rgb(22, 22, 30);
-  border-radius: 15px 60px 15px 60px;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  height: 100vh;
+}
+
+.App-content-char-center {
+  margin: auto;
+  background: rgba(22,22,30,1);
+  width: 400px;
+  height: 100vh;
+  transform: skew(25deg);
 }
 
 .Char-image{
-  vertical-align: bottom;
-  height: 80vh;
+  height: 85vh;
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+}
+
+.App-content{
+  margin: auto;
+  padding-left: 250px;
+  align-items: center;
+  align-content: center;
 }

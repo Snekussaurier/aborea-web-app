@@ -1,11 +1,14 @@
-import React,{Component} from "react";
+import React from "react";
+import image from './img/Bard.png';
 
-export class Home extends Component{
-    render(){
-        return(
-            <div>
-                <h3>This is Home</h3>
+const Home = () => {
+    return(
+        <div>
+            <div className="App-content-char">
+                <div className="App-content-char-center"/>
+                <img src={image} className="Char-image"/>
             </div>
-        )
-    }
+        </div>
+    );
 }
+export default Home;
