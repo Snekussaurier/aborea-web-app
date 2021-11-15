@@ -5,12 +5,15 @@ import UilMoney from '@iconscout/react-unicons/icons/uil-yen-circle'
 const Backpack = () => {
     return(
         <div className="App-backpack-content">
-            <div className="App-content-header App-backpack">
-                <UilBackpack size="80" className="App-content-header-icon"/>
+            <div className="App-content-header">
+                <UilBackpack size="56" className="App-content-header-icon"/>
                 <h1>
                     Backpack
                 </h1>
             </div>
+            <h3>
+                My Wallet
+            </h3>
             <div className="App-backpack-money">
                 <div style={{display: "flex"}}>
                     <UilWallet size="25" style={{color: "var(--2)"}}/>

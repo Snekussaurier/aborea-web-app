@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 
+h3{
+  color: white;
+  font-size: 18pt;
+}
+
 .App {
   background-color: #1a1b26;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
 .App-bg-image{
@@ -87,49 +93,50 @@
   -ms-transition:     0.15s ease-in;
   -moz-transition:    0.15s ease-in;
   -webkit-transition: 0.15s ease-in;
+  color: rgba(255, 255, 255, 0.2);
 }
+
 .App-sidenav-btn:hover{
   color: white;
 }
 
-.App-sidenav-btn1{
-  color: var(--1);
-}
 .App-sidenav-btn1:hover{
   background-color: var(--1);
-}
-.App-sidenav-btn2{
-  color: var(--2);
 }
 .App-sidenav-btn2:hover{
   background-color: var(--2);
 }
-.App-sidenav-btn3{
-  color: var(--3);
-}
 .App-sidenav-btn3:hover{
   background-color: var(--3);
-}
-.App-sidenav-btn4{
-  color: var(--4);
 }
 .App-sidenav-btn4:hover{
   background-color: var(--4);
 }
-.App-sidenav-btn5{
-  color: var(--5);
-}
 .App-sidenav-btn5:hover{
   background-color: var(--5);
 }
-
+.App-sidenav-btn1-active{
+  -color: var(--1);
+}
+.App-sidenav-btn2-active{
+  color: var(--2);
+}
+.App-sidenav-btn3-active:hover{
+  color: var(--3);
+}
+.App-sidenav-btn4-active:hover{
+  color: var(--4);
+}
+.App-sidenav-btn5-active:hover{
+  color: var(--5);
+}
 .App-sidenav-btn-icon {
   margin: 0px 22px;
 }
 
 :root {
   --1: #9972cb;
-  --2: #8fc866; 
+  --2: #C972CB; 
   --3: #ff7f82; 
   --4: #ffa260; 
   --5: #e4cb58;
@@ -183,16 +190,17 @@
 .App-content-header{
   width: fit-content;
   display: flex;
+  color: white;
 }
 
 .App-content-header h1{
   font-weight: bold;
-  font-size: 50pt;
+  font-size: 36pt;
 }
 
 .App-content-header-icon{
-  margin-right: 30px;
-  transform: rotate(-15deg);
+  margin-right: 18px;
+  color: var(--2);
 }
 
 .App-backpack-money{
@@ -215,9 +223,6 @@
   -moz-transition:    0.15s ease-in;
   -webkit-transition: 0.15s ease-in;
   align-items: flex-end;
-}
-.App-backpack-money h1{
-  font-size: 15pt;
 }
 
 .App-home{

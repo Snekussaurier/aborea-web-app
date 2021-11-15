@@ -11,6 +11,7 @@ const Home = () => {
                     Home
                 </h1>
             </div>
+            <UilEstate size="1000"/>
         </div>
     );
 }

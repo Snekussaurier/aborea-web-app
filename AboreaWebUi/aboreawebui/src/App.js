@@ -18,19 +18,19 @@ function App() {
             <nav className="App-sidenav">
                 <ul className="navbar-nav">
                     <li className="nav-item-">
-                        <NavLink className="App-sidenav-btn fill App-sidenav-btn1" to="/">
+                        <NavLink className="App-sidenav-btn fill App-sidenav-btn1" activeClassName="App-sidenav-btn1-active" to="/">
                             <UilEstate size="30" className="App-sidenav-btn-icon"/>
                             Home
                         </NavLink>
-                        <NavLink className="App-sidenav-btn fill App-sidenav-btn2" to="/backpack">
+                        <NavLink className="App-sidenav-btn fill App-sidenav-btn2" activeClassName="App-sidenav-btn2-active" to="/backpack">
                             <UilBackpack size="30" className="App-sidenav-btn-icon"/>
                             Backpack
                         </NavLink>
-                        <NavLink className="App-sidenav-btn fill App-sidenav-btn3" to="/level">
+                        <NavLink className="App-sidenav-btn fill App-sidenav-btn3" activeClassName="App-sidenav-btn3-active" to="/level">
                             <UilWindow size="30" className="App-sidenav-btn-icon"/>
                             Level
                         </NavLink>
-                        <NavLink className="App-sidenav-btn fill App-sidenav-btn4" to="/stats">
+                        <NavLink className="App-sidenav-btn fill App-sidenav-btn4" activeClassName="App-sidenav-btn4-active" to="/stats">
                             <UilAnalytics size="30" className="App-sidenav-btn-icon"/>
                             Statistics
                         </NavLink>
