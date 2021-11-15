@@ -2,7 +2,6 @@
 
 
 .App {
-  text-align: center;
   background-color: #1a1b26;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
@@ -69,17 +68,6 @@
   background-color: rgb(22, 22, 30);
 }
 
-.App-sidenav::before{
-  position: absolute;
-  top: 0;
-  left: 248px;
-  display: block;
-  content: '';
-  width: 2px;
-  height: 100vh;
-  background: rgba(255,255,255,0.14);
-}
-
 .App-sidenav-btn {
   height: 54px;
   line-height: 54px;
@@ -141,7 +129,7 @@
 
 :root {
   --1: #9972cb;
-  --2: #ef6eae; 
+  --2: #8fc866; 
   --3: #ff7f82; 
   --4: #ffa260; 
   --5: #e4cb58;
@@ -152,26 +140,98 @@
 .App-content-char {
   margin: auto;
   height: 100vh;
+  overflow: hidden;
 }
 
 .App-content-char-center {
-  margin: auto;
-  background: rgba(22,22,30,1);
-  width: 400px;
-  height: 100vh;
-  transform: skew(25deg);
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 0;
+  bottom: 0;
 }
 
 .Char-image{
-  height: 85vh;
+  height: 90vh;
+  min-height: 80vh;
+  
+}
+
+.App-home-name{
+  height: auto;
   position: absolute;
-  bottom: 5%;
-  right: 10%;
+  width: auto;
+  top: 35%;
+  left: 30%;
+  text-align: left;
+  color: white;
+}
+
+.App-home-name h1{
+  font-size: 64pt;
+  font-weight: bold;
+  color: var(--5);
+  margin: 10px 0px;
 }
 
 .App-content{
-  margin: auto;
-  padding-left: 250px;
-  align-items: center;
-  align-content: center;
+  margin-left: 250px;
+  height: 100vh;
+  padding: 40px 40px;
+}
+
+.App-content-header{
+  width: fit-content;
+  display: flex;
+}
+
+.App-content-header h1{
+  font-weight: bold;
+  font-size: 50pt;
+}
+
+.App-content-header-icon{
+  margin-right: 30px;
+  transform: rotate(-15deg);
+}
+
+.App-backpack-money{
+  background-color: rgb(22, 22, 30);
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 70px;
+  width: fit-content;
+}
+
+.App-backpack-money-container{
+  color: white;
+  padding: 15px;
+  border-radius: 40px;
+  margin-top: 20px;
+  display: flex;
+  transition:         0.15s ease-in;
+  -o-transition:      0.15s ease-in;
+  -ms-transition:     0.15s ease-in;
+  -moz-transition:    0.15s ease-in;
+  -webkit-transition: 0.15s ease-in;
+  align-items: flex-end;
+}
+.App-backpack-money h1{
+  font-size: 15pt;
+}
+
+.App-home{
+  color: var(--1);
+}
+
+.App-backpack{
+  color: var(--2);
+}
+
+.App-level{
+  color: var(--3);
+}
+
+.App-stats{
+  color: var(--4);
 }

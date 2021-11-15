@@ -1,12 +1,15 @@
 import React from "react";
-import image from './img/Bard.png';
+import image from './img/BardHalf.png';
+import UilEstate from '@iconscout/react-unicons/icons/uil-estate'
 
 const Home = () => {
     return(
         <div>
-            <div className="App-content-char">
-                <div className="App-content-char-center"/>
-                <img src={image} className="Char-image"/>
+            <div className="App-content-header App-home">
+                <UilEstate size="80" className="App-content-header-icon"/>
+                <h1>
+                    Home
+                </h1>
             </div>
         </div>
     );
