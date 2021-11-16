@@ -4,63 +4,118 @@ import UilMoney from '@iconscout/react-unicons/icons/uil-yen-circle'
 
 const Backpack = () => {
     return(
-        <div className="App-backpack-content">
-            <div className="App-content-header">
+        <div>
+            <div className="App-content-header App-backpack">
                 <UilBackpack size="56" className="App-content-header-icon"/>
                 <h1>
                     Backpack
                 </h1>
             </div>
-            <h3>
-                My Wallet
-            </h3>
-            <div className="App-backpack-money">
-                <div style={{display: "flex"}}>
-                    <UilWallet size="25" style={{color: "var(--2)"}}/>
-                    <h1 style={{marginLeft: "15px", color: "var(--2)"}}>
-                        Geldbeutel
-                    </h1>
-                
+            <div className="App-backpack-content">
+                <div>
+                    <h3>
+                        My Wallet
+                    </h3>
+                    <div className="App-backpack-content-horizontal">
+                        <div className="App-backpack-content-currency App-container">
+                            <div className="App-symbol-background" style={{backgroundColor: "var(--1)"}}>
+
+                            </div>
+                            <p style={{marginTop: "24px"}}>
+                                Goldfalken
+                            </p>
+                            <h2>
+                                GF 11
+                            </h2>
+
+                            <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
+                                <button className="App-small-btn">
+                                    +
+                                </button>
+                                /
+                                <button className="App-small-btn">
+                                    -
+                                </button>
+                            </div>
+                        </div>
+                        <div className="App-backpack-content-currency App-container">
+                            <div className="App-symbol-background" style={{backgroundColor: "var(--2)"}}>
+
+                            </div>
+                            <p style={{marginTop: "24px"}}>
+                                Triontaler
+                            </p>
+                            <h2>
+                                TT 5
+                            </h2>
+
+                            <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
+                                <button className="App-small-btn">
+                                    +
+                                </button>
+                                /
+                                <button className="App-small-btn">
+                                    -
+                                </button>
+                            </div>
+                        </div>
+                        <div className="App-backpack-content-currency App-container">
+                            <div className="App-symbol-background" style={{backgroundColor: "var(--3)"}}>
+
+                            </div>
+                            <p style={{marginTop: "24px"}}>
+                                Kupferlinge
+                            </p>
+                            <h2>
+                                KU 3
+                            </h2>
+
+                            <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
+                                <button className="App-small-btn">
+                                    +
+                                </button>
+                                /
+                                <button className="App-small-btn">
+                                    -
+                                </button>
+                            </div>
+                        </div>
+                        <div className="App-backpack-content-currency App-container">
+                            <div className="App-symbol-background" style={{backgroundColor: "var(--4)"}}>
+
+                            </div>
+                            <p style={{marginTop: "24px"}}>
+                                Muena
+                            </p>
+                            <h2>
+                                MU 9
+                            </h2>
+
+                            <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
+                                <button className="App-small-btn">
+                                    +
+                                </button>
+                                /
+                                <button className="App-small-btn">
+                                    -
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 style={{marginTop: "24px"}}>
+                        Backpack Details
+                    </h3>
+                    <div className="App-container" style={{marginTop: "15px"}}>
+
+                    </div>
                 </div>
 
-                <div className="App-backpack-money-container">
-                    <h1 style={{color: "gray"}}>
-                        Goldfalken
-                    </h1>
-                    <div style={{alignSelf: "flex-end"}}>
-                        <h1 style={{marginLeft: "15px", fontSize: "32pt"}}>
-                            30 GF
-                        </h1>
-                    </div>
-                </div>
-                <div className="App-backpack-money-container">
-                    <h1 style={{color: "gray"}}>
-                        Triontaler
-                    </h1>
-                    <div style={{alignSelf: "flex-end"}}>
-                        <h1 style={{marginLeft: "15px", fontSize: "32pt"}}>
-                            8 TT
-                        </h1>
-                    </div>
-                </div>
-                <div className="App-backpack-money-container">
-                    <h1 style={{color: "gray"}}>
-                        Kupferlinge
-                    </h1>
-                    <div style={{align: "flex-end"}}>
-                        <h1 style={{marginLeft: "15px", fontSize: "32pt"}}>
-                            11 KL
-                        </h1>
-                    </div>
-                </div>
-                <div className="App-backpack-money-container">
-                    <h1 style={{color: "gray"}}>
-                        Muena
-                    </h1>
-                    <div style={{alignSelf: "flex-end"}}>
-                        <h1 style={{marginLeft: "15px", fontSize: "32pt"}}>
-                            15 MU
-                        </h1>
+                <div>
+                    <h3>
+                        Inventory
+                    </h3>
+                    <div className="App-container" style={{marginTop: "15px", width: "100%"}}>
+
                     </div>
                 </div>
             </div>

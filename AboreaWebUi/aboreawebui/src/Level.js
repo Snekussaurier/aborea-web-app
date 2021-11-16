@@ -4,7 +4,7 @@ const Level = () => {
     return(
         <div>
             <div className="App-content-header App-level">
-                <UilWindow size="80" className="App-content-header-icon"/>
+                <UilWindow size="56" className="App-content-header-icon"/>
                 <h1>
                     Level
                 </h1>

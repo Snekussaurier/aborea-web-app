@@ -6,12 +6,11 @@ const Home = () => {
     return(
         <div>
             <div className="App-content-header App-home">
-                <UilEstate size="80" className="App-content-header-icon"/>
+                <UilEstate size="56" className="App-content-header-icon"/>
                 <h1>
-                    Home
+                    Dashboard
                 </h1>
             </div>
-            <UilEstate size="1000"/>
         </div>
     );
 }
