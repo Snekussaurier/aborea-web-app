@@ -9,9 +9,14 @@ import UilEstate from '@iconscout/react-unicons/icons/uil-estate'
 import UilBackpack from '@iconscout/react-unicons/icons/uil-backpack'
 import UilWindow from '@iconscout/react-unicons/icons/uil-window'
 import UilAnalytics from '@iconscout/react-unicons/icons/uil-analytics'
-import UilToiletPaper from '@iconscout/react-unicons/icons/uil-toilet-paper'
 
 function App() {
+
+    const incrementItem = (obj) => {
+        obj.ammount++;
+        console.log(obj.ammount);
+    }
+
   return (
     <Router>
         <div className="App">
@@ -40,14 +45,13 @@ function App() {
             <div className="App-content">
                 <Routes>
                     <Route path="/" element={ <Home/> }/>
-                    <Route path="/backpack" element={ <Backpack/> }/>
+                    <Route path="/backpack" element={ <Backpack onIncrement={incrementItem}/> }/>
                     <Route path="/level" element={ <Level/> }/>
                     <Route path="/stats" element={ <Stats/> }/>
                 </Routes>
             </div>
         </div>
     </Router>
-
   );
 }
 

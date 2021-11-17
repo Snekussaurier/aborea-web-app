@@ -1,8 +1,10 @@
-import UilBackpack from '@iconscout/react-unicons/icons/uil-backpack';
-import UilWallet from '@iconscout/react-unicons/icons/uil-wallet'
-import UilMoney from '@iconscout/react-unicons/icons/uil-yen-circle'
+import { useState } from 'react';
 
-const Backpack = () => {
+import UilBackpack from '@iconscout/react-unicons/icons/uil-backpack';
+
+const Backpack = ({onIncrement}) => {
+    var goldfalken = { ammount: 11};
+
     return(
         <div>
             <div className="App-content-header App-backpack">
@@ -25,11 +27,11 @@ const Backpack = () => {
                                 Goldfalken
                             </p>
                             <h2>
-                                GF 11
+                                {goldfalken.ammount}
                             </h2>
 
                             <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn">
+                                <button className="App-small-btn" onClick={() => onIncrement(goldfalken)}>
                                     +
                                 </button>
                                 /
