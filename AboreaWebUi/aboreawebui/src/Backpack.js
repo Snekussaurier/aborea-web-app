@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Tasks from './components/Item';
 
 import UilBackpack from '@iconscout/react-unicons/icons/uil-backpack';
 
@@ -117,7 +118,7 @@ const Backpack = ({onIncrement}) => {
                         Inventory
                     </h3>
                     <div className="App-container" style={{marginTop: "15px", width: "100%"}}>
-
+                        <Tasks/>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Roboto:wght@400&display=swap');
 
 h2{
   color: white;
@@ -20,16 +20,6 @@ p{
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
 }
-
-.App-bg-image{
-  background-image: url("./img/vivid-blurred-colorful-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* Add the blur effect */
-  filter: blur(0px);
-  -webkit-filter: blur(0px);
-  height: 100vh;
-}s
 
 .App-logo {
   height: 40vmin;
@@ -223,7 +213,6 @@ p{
   margin-top: 40px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .App-backpack-content-horizontal{
@@ -232,7 +221,6 @@ p{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 620px;
   height: 220px;
 }
 
@@ -240,6 +228,7 @@ p{
   background: #16161E;
   border-radius: 20px;
   padding: 20px;
+  margin-right: 20px;
 }
 
 .App-small-btn{

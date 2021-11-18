@@ -3,7 +3,7 @@ import './App.css';
 import Home from './Home';
 import Backpack from './Backpack';
 import Level from './Level';
-import Stats from './Stats';
+import Stats from './Development';
 import {BrowserRouter as Router, Route, Routes, NavLink} from 'react-router-dom'
 import UilEstate from '@iconscout/react-unicons/icons/uil-estate'
 import UilBackpack from '@iconscout/react-unicons/icons/uil-backpack'
@@ -25,7 +25,7 @@ function App() {
                     <li className="nav-item-">
                         <NavLink className="App-sidenav-btn fill App-sidenav-btn1" activeClassName="App-sidenav-btn1-active" to="/">
                             <UilEstate size="30" className="App-sidenav-btn-icon"/>
-                            Home
+                            Dashboard
                         </NavLink>
                         <NavLink className="App-sidenav-btn fill App-sidenav-btn2" activeClassName="App-sidenav-btn2-active" to="/backpack">
                             <UilBackpack size="30" className="App-sidenav-btn-icon"/>
@@ -37,7 +37,7 @@ function App() {
                         </NavLink>
                         <NavLink className="App-sidenav-btn fill App-sidenav-btn4" activeClassName="App-sidenav-btn4-active" to="/stats">
                             <UilAnalytics size="30" className="App-sidenav-btn-icon"/>
-                            Statistics
+                            Development
                         </NavLink>
                     </li>
                 </ul>

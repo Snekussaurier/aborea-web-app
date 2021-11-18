@@ -6,7 +6,7 @@ const Stats = () => {
             <div className="App-content-header App-stats">
                 <UilAnalytics size="56" className="App-content-header-icon"/>
                 <h1>
-                    Statistics
+                    Development
                 </h1>
             </div>
         </div>
