@@ -3,8 +3,44 @@ import Tasks from './components/Item';
 
 import UilBackpack from '@iconscout/react-unicons/icons/uil-backpack';
 
-const Backpack = ({onIncrement}) => {
-    var goldfalken = { ammount: 11};
+const Backpack = () => {
+    const [wallet, setWallet] = useState({goldfalken: 3, triontaler: 8, kupferlinge: 5, muena: 1});
+
+    const changeGoldfalken = (ammount) => {
+        if(wallet.goldfalken + ammount < 0){
+            setWallet({...wallet, goldfalken: 0});
+        }
+        else{
+        setWallet({...wallet, goldfalken: wallet.goldfalken + ammount});
+        }
+    }
+
+    const changeTriontaler = (ammount) => {
+        if(wallet.triontaler + ammount < 0){
+            setWallet({...wallet, triontaler: 0});
+        }
+        else{
+        setWallet({...wallet, triontaler: wallet.triontaler + ammount});
+        }
+    }
+
+    const changeKupferlinge = (ammount) => {
+        if(wallet.kupferlinge + ammount < 0){
+            setWallet({...wallet, kupferlinge: 0});
+        }
+        else{
+        setWallet({...wallet, kupferlinge: wallet.kupferlinge + ammount});
+        }
+    }
+
+    const changeMuena = (ammount) => {
+        if(wallet.muena + ammount < 0){
+            setWallet({...wallet, muena: 0});
+        }
+        else{
+        setWallet({...wallet, muena: wallet.muena + ammount});
+        }
+    }
 
     return(
         <div>
@@ -28,15 +64,15 @@ const Backpack = ({onIncrement}) => {
                                 Goldfalken
                             </p>
                             <h2>
-                                {goldfalken.ammount}
+                                GF {wallet.goldfalken}
                             </h2>
 
                             <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn" onClick={() => onIncrement(goldfalken)}>
+                                <button className="App-small-btn" onClick={() => changeGoldfalken(1)}>
                                     +
                                 </button>
                                 /
-                                <button className="App-small-btn">
+                                <button className="App-small-btn" onClick={() => changeGoldfalken(-1)}>
                                     -
                                 </button>
                             </div>
@@ -49,15 +85,15 @@ const Backpack = ({onIncrement}) => {
                                 Triontaler
                             </p>
                             <h2>
-                                TT 5
+                                TT {wallet.triontaler}
                             </h2>
 
                             <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn">
+                                <button className="App-small-btn" onClick={() => changeTriontaler(1)}>
                                     +
                                 </button>
                                 /
-                                <button className="App-small-btn">
+                                <button className="App-small-btn" onClick={() => changeTriontaler(-1)}>
                                     -
                                 </button>
                             </div>
@@ -70,15 +106,15 @@ const Backpack = ({onIncrement}) => {
                                 Kupferlinge
                             </p>
                             <h2>
-                                KU 3
+                                KU {wallet.kupferlinge}
                             </h2>
 
                             <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn">
+                                <button className="App-small-btn" onClick={() => changeKupferlinge(1)}>
                                     +
                                 </button>
                                 /
-                                <button className="App-small-btn">
+                                <button className="App-small-btn" onClick={() => changeKupferlinge(-1)}>
                                     -
                                 </button>
                             </div>
@@ -91,15 +127,15 @@ const Backpack = ({onIncrement}) => {
                                 Muena
                             </p>
                             <h2>
-                                MU 9
+                                MU {wallet.muena}
                             </h2>
 
                             <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn">
+                                <button className="App-small-btn" onClick={() => changeMuena(1)}>
                                     +
                                 </button>
                                 /
-                                <button className="App-small-btn">
+                                <button className="App-small-btn" onClick={() => changeMuena(-1)}>
                                     -
                                 </button>
                             </div>
