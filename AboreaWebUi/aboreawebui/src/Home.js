@@ -16,28 +16,19 @@ const Home = () => {
                     <h3>
                         Statistics
                     </h3>
+                    <p style={{marginTop: "20px", marginBottom: "0px"}}>
+                        Trefferpunkte
+                    </p>
+                    <div style={{width: "calc(100% - 20px)", height: "50px", borderRadius: "25px", backgroundColor: "var(--6)", marginTop: "5px"}}>
+
+                    </div>
+                    <p style={{marginTop: "20px", marginBottom: "0px"}}>
+                        Manapunkte
+                    </p>
+                    <div style={{width: "calc(100% - 20px)", height: "50px", borderRadius: "25px", backgroundColor: "var(--1)", marginTop: "5px"}}>
+
+                    </div>
                     <div className="App-backpack-content-horizontal">
-                        <div className="App-backpack-content-currency App-container">
-                            <div className="App-symbol-background" style={{backgroundColor: "var(--1)"}}>
-
-                            </div>
-                            <p style={{marginTop: "24px"}}>
-                                Trefferpunkte
-                            </p>
-                            <h2>
-                                TP 12
-                            </h2>
-
-                            <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn">
-                                    +
-                                </button>
-                                /
-                                <button className="App-small-btn">
-                                    -
-                                </button>
-                            </div>
-                        </div>
                         <div className="App-backpack-content-currency App-container">
                             <div className="App-symbol-background" style={{backgroundColor: "var(--2)"}}>
 
@@ -48,43 +39,9 @@ const Home = () => {
                             <h2>
                                 RB 5
                             </h2>
-
-                            <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn">
-                                    +
-                                </button>
-                                /
-                                <button className="App-small-btn">
-                                    -
-                                </button>
-                            </div>
                         </div>
                         <div className="App-backpack-content-currency App-container">
                             <div className="App-symbol-background" style={{backgroundColor: "var(--3)"}}>
-
-                            </div>
-                            <p style={{marginTop: "24px"}}>
-                                Manapunkte
-                            </p>
-                            <h2>
-                                MP 3
-                            </h2>
-
-                            <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn">
-                                    +
-                                </button>
-                                /
-                                <button className="App-small-btn">
-                                    -
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="App-backpack-content-horizontal">
-                        <div className="App-backpack-content-currency App-container">
-                            <div className="App-symbol-background" style={{backgroundColor: "var(--4)"}}>
 
                             </div>
                             <p style={{marginTop: "24px"}}>
@@ -93,19 +50,9 @@ const Home = () => {
                             <h2>
                                 INI 12
                             </h2>
-
-                            <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn">
-                                    +
-                                </button>
-                                /
-                                <button className="App-small-btn">
-                                    -
-                                </button>
-                            </div>
                         </div>
                         <div className="App-backpack-content-currency App-container">
-                            <div className="App-symbol-background" style={{backgroundColor: "var(--5)"}}>
+                            <div className="App-symbol-background" style={{backgroundColor: "var(--4)"}}>
 
                             </div>
                             <p style={{marginTop: "24px"}}>
@@ -114,19 +61,9 @@ const Home = () => {
                             <h2>
                                 KB 5
                             </h2>
-
-                            <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn">
-                                    +
-                                </button>
-                                /
-                                <button className="App-small-btn">
-                                    -
-                                </button>
-                            </div>
                         </div>
                         <div className="App-backpack-content-currency App-container">
-                            <div className="App-symbol-background" style={{backgroundColor: "var(--6)"}}>
+                            <div className="App-symbol-background" style={{backgroundColor: "var(--5)"}}>
 
                             </div>
                             <p style={{marginTop: "24px"}}>
@@ -135,31 +72,8 @@ const Home = () => {
                             <h2>
                                 DM 3
                             </h2>
-
-                            <div className="App-backpack-content-horizontal" style={{height: "auto", width: "100%", marginTop: "10px"}}>
-                                <button className="App-small-btn">
-                                    +
-                                </button>
-                                /
-                                <button className="App-small-btn">
-                                    -
-                                </button>
-                            </div>
                         </div>
                     </div>
-                    <h3 style={{marginTop: "24px"}}>
-                        Gear
-                    </h3>
-                </div>
-
-                <div>
-                    <img src={image} style={{height: "90vh", marginRight: "20px"}}/>
-                </div>
-
-                <div>
-                    <h3>
-                        Player Effects
-                    </h3>
                 </div>
             </div>
         </div>

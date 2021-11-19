@@ -29,7 +29,6 @@ const items = [
         price: '7 KL',
         function: 'Zum Schreiben mit Tinte'
     },
-    
 ]
 
 const Item = () => {
