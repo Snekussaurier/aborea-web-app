@@ -1,6 +1,7 @@
 import React from "react";
 import image from './img/Bard.png';
 import UilEstate from '@iconscout/react-unicons/icons/uil-estate'
+import FillBar from "./components/FillBar";
 
 const Home = () => {
     return(
@@ -12,6 +13,7 @@ const Home = () => {
                 </h1>
             </div>
             <div className="App-backpack-content"> 
+                <img src={image} className="Char-image"/>
                 <div>
                     <h3>
                         Statistics
@@ -19,9 +21,7 @@ const Home = () => {
                     <p style={{marginTop: "20px", marginBottom: "0px"}}>
                         Trefferpunkte
                     </p>
-                    <div style={{width: "calc(100% - 20px)", height: "50px", borderRadius: "25px", backgroundColor: "var(--6)", marginTop: "5px"}}>
-
-                    </div>
+                    <FillBar/>
                     <p style={{marginTop: "20px", marginBottom: "0px"}}>
                         Manapunkte
                     </p>
@@ -51,6 +51,8 @@ const Home = () => {
                                 INI 12
                             </h2>
                         </div>
+                    </div>
+                    <div className="App-backpack-content-horizontal">
                         <div className="App-backpack-content-currency App-container">
                             <div className="App-symbol-background" style={{backgroundColor: "var(--4)"}}>
 

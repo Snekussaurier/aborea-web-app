@@ -144,16 +144,16 @@ const Backpack = () => {
                     <h3 style={{marginTop: "24px"}}>
                         Backpack Details
                     </h3>
-                    <div className="App-container" style={{marginTop: "15px"}}>
+                    <div className="App-container" style={{marginTop: "20px"}}>
 
                     </div>
                 </div>
 
-                <div>
+                <div style={{flexGrow: "1"}}>
                     <h3>
                         Inventory
                     </h3>
-                    <div className="App-container" style={{marginTop: "15px", width: "100%"}}>
+                    <div className="App-container" style={{marginTop: "15px"}}>
                         <Tasks/>
                     </div>
                 </div>

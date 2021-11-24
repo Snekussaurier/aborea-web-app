@@ -33,9 +33,9 @@ const items = [
 
 const Item = () => {
     return (
-        <div>
-            <table>
-                <thead>
+        <div className="Item-table">
+            <table style={{width: "100%"}}>
+                <thead style={{marginBottom: "15px"}}>
                     <tr>
                         <th>
                             ID
@@ -51,7 +51,7 @@ const Item = () => {
                         </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
                     {items.map((item) => (
                             <tr key={item.id}>
                                 <td>

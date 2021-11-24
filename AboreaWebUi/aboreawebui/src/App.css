@@ -22,18 +22,12 @@ body{
   background-color: #1a1b26;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -160,9 +154,7 @@ body{
 }
 
 .Char-image{
-  height: 90vh;
-  min-height: 80vh;
-  
+  height: calc(100vh - 150px);
 }
 
 .App-home-name{
@@ -192,6 +184,7 @@ body{
   width: fit-content;
   display: flex;
   color: white;
+  height: 70px;
 }
 
 .App-content-header h1{
@@ -216,6 +209,7 @@ body{
   margin-top: 40px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .App-backpack-content-horizontal{
@@ -275,4 +269,27 @@ body{
   height: 40px;
 
   border-radius: 20px;
+}
+
+.Fill-bar{
+  width: calc(100% - 20px);
+  height: 50px; 
+  border-radius: 25px; 
+  margin-top: 5px;
+}
+
+.Fill-bar-health{
+  background-color: var(--6);
+}
+
+.Fill-bar-mana{
+  background-color: var(--1);
+}
+
+.Item-table{
+  color: white;
+}
+
+.Item-table th{
+  color: #A8A8A8;
 }
