@@ -51,8 +51,6 @@ const Home = () => {
                                 INI 12
                             </h2>
                         </div>
-                    </div>
-                    <div className="App-backpack-content-horizontal">
                         <div className="App-backpack-content-currency App-container">
                             <div className="App-symbol-background" style={{backgroundColor: "var(--4)"}}>
 

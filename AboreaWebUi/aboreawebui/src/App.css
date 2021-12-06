@@ -288,8 +288,10 @@ body{
 
 .Item-table{
   color: white;
+  font-size: 18px;
 }
 
 .Item-table th{
   color: #A8A8A8;
+  font-size: 12pt;
 }

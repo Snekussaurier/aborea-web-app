@@ -12,11 +12,6 @@ import UilAnalytics from '@iconscout/react-unicons/icons/uil-analytics'
 
 function App() {
 
-    const incrementItem = (obj) => {
-        obj.ammount++;
-        console.log(obj.ammount);
-    }
-
   return (
     <Router>
         <div className="App">
@@ -45,7 +40,7 @@ function App() {
             <div className="App-content">
                 <Routes>
                     <Route path="/" element={ <Home/> }/>
-                    <Route path="/backpack" element={ <Backpack onIncrement={incrementItem}/> }/>
+                    <Route path="/backpack" element={ <Backpack/> }/>
                     <Route path="/level" element={ <Level/> }/>
                     <Route path="/stats" element={ <Stats/> }/>
                 </Routes>
