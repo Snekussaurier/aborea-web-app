@@ -20,17 +20,8 @@ function App() {
           </div>
           <div className="App-container" style={{ width: "100%", background: "#16161e", height: "120px" }}>
           </div>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React Now On Your Device!
-          </a>
+          <div className="App-container" style={{ width: "100%", background: "#16161e", height: "120px" }}>
+          </div>
         </header>
         <Navigation />
         <Routes>

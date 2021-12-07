@@ -8,27 +8,24 @@ import UilAnalytics from '@iconscout/react-unicons/icons/uil-analytics';
 
 const Navigation = () => {
     return (
-        <footer className="App-footer">
-            <NavLink className="App-sidenav-btn fill App-sidenav-btn1" activeStyle={{ color: "green" }} to="/">
+        <div className="App-navbar">
+            <NavLink className="App-navbar-button fill App-sidenav-btn1" activeStyle={{ color: "green" }} to="/">
                 <UilEstate size="28" className="App-sidenav-btn-icon" />
-                Dashboard
+                <span className="App-navbar-button-text">Home</span>
             </NavLink>
-            <NavLink className="App-sidenav-btn fill App-sidenav-btn2" activeStyle={{ color: 'green' }} to="/backpack">
+            <NavLink className="App-navbar-button fill App-sidenav-btn2" activeStyle={{ color: 'green' }} to="/backpack">
                 <UilBackpack size="28" className="App-sidenav-btn-icon" />
-                Backpack
+                <span className="App-navbar-button-text">Backpack</span>
             </NavLink>
-            <NavLink className="App-sidenav-btn fill App-sidenav-btn3" activeStyle={{ color: 'green' }} to="/level">
+            <NavLink className="App-navbar-button fill App-sidenav-btn3" activeStyle={{ color: 'green' }} to="/level">
                 <UilWindow size="28" className="App-sidenav-btn-icon" />
-                Level
+                <span className="App-navbar-button-text">Level</span>
             </NavLink>
-            <NavLink className="App-sidenav-btn fill App-sidenav-btn4" activeClassName="App-sidenav-btn4-active"   activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }} to="/stats">
+            <NavLink className="App-navbar-button fill App-sidenav-btn4" activeClassName="App-sidenav-btn4-active" to="/stats">
                 <UilAnalytics size="28" className="App-sidenav-btn-icon" />
-                Development
+                <span className="App-navbar-button-text">Statistics</span>
             </NavLink>
-        </footer>
+        </div>
     );
 }
 export default Navigation;
