@@ -1,48 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --1: #9972cb;
+  --2: #C972CB; 
+  --3: #ff7f82; 
+  --4: #ffa260; 
+  --5: #e4cb58;
+  --6: #8fc866;
+  --7: #19bc8b;
+}
+
+hr {
+  height: 1px;
+  color: #111111;
+  background-color: #111111;
+  border-width: 0;
+}
+
+h1 {
+  color: white;
+  margin: 0;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+  font-weight: bold;
+  margin: 6px;
+}
+
+p{
+  color: white;
+  margin: 0;
+}
+
+
 
 .App {
-  text-align: center;
-  font-family: 'Lato', sans-serif;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
 }
 
 .App-logo {
-  height: 90vmin;
-  max-height: 600px;
+  width: 100%;
   pointer-events: none;
 }
 
 .App-header {
-  background-color: #1a1b26;
-  min-height: 100vh;
+  font-size: calc(18px + 1vmin);
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  text-align: left;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 20px;
-}
-
-.App-link {
-  color: #61dafb;
+  margin-top: 45px;
 }
 
 .App-container {
-  max-width: 600px;
-  border-radius: 20px 20px;
+  position: relative;
+  max-width: 400px;
+  border-radius: 20px;
   display: flex;
-  align-items: flex-end;
-  margin: 20px 20px;
+}
+
+.App-container-description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  backdrop-filter: blur(50px);
+  border-radius: 0 0 20px 20px;
+  border-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-player {
+  background: #8A2387;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .App-navbar {
   position: fixed;
   left: 0;
   width: 100%;
-  color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(9px);
+  color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   display: flex;
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
@@ -53,6 +102,20 @@
 .App-navbar-button{
   text-decoration: none;
   display: flex;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.App-navbar-button1:hover {
+  color: var(--1);
+}
+.App-navbar-button2:hover{
+  color: var(--2);
+}
+.App-navbar-button3:hover{
+  color: var(--3);
+}
+.App-navbar-button4:hover{
+  color: var(--4);
 }
 
 .App-navbar-button-text{
@@ -112,9 +175,9 @@
   }
   .App-navbar {
     bottom: 0;
-    height: 70px;
+    height: 75px;
     justify-content: space-around;
-    background-color: rgba(22, 22, 30, 0.75);
+    background-color: rgba(20, 20, 20, 0.5);
     padding-bottom: 15px;
     align-items: center;
   }

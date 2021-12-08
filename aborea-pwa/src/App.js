@@ -1,32 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
-import Navigation from "./components/Navigation"
-
-import logo from './img/BardHalf.png';
+import Navigation from "./components/Navigation";
+import Header from "./components/Header";
+import Home from "./Home";
 import './App.css';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <h1>
-            Firion
-          </h1>
-          <div className="App-container" style={{ background: "linear-gradient(239.75deg, #FF74F9 0%, #2E81FF 100%)" }}>
-            <img src={logo} className="App-logo" alt="logo" />
-          </div>
-          <div className="App-container" style={{ width: "100%", background: "#16161e", height: "120px" }}>
-          </div>
-          <div className="App-container" style={{ width: "100%", background: "#16161e", height: "120px" }}>
-          </div>
-          <div className="App-container" style={{ width: "100%", background: "#16161e", height: "120px" }}>
-          </div>
-        </header>
-        <Navigation />
+        <Header name="Firion"/>
         <Routes>
-          <Route path="/" element={<div/>} />
+          <Route path="/" element={<Home />} />
         </Routes>
+        <Navigation/>
       </div>
     </Router>
   );
