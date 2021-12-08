@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 :root {
   --1: #9972cb;
@@ -12,8 +12,8 @@
 
 hr {
   height: 1px;
-  color: #111111;
-  background-color: #111111;
+  color: #222222;
+  background-color: #222222;
   border-width: 0;
 }
 
@@ -24,6 +24,8 @@ h1 {
 
 h2 {
   color: white;
+  margin: 0;
+  margin-top: 20px;
 }
 
 h3 {
@@ -51,12 +53,16 @@ p{
 }
 
 .App-header {
-  font-size: calc(18px + 1vmin);
+  font-size: calc(16px + 1vmin);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 45px;
+  margin-top: 20px;
+}
+
+.Background-grey{
+  background-color: #141414;
 }
 
 .App-container {
@@ -64,6 +70,13 @@ p{
   max-width: 400px;
   border-radius: 20px;
   display: flex;
+  margin: 20px 0;
+  min-height: 100px;
+}
+
+.Horizontal {
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .App-container-description {
@@ -80,10 +93,22 @@ p{
   align-items: center;
 }
 
-.App-player {
-  background: #8A2387;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+.App-container-add-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  min-width: 40px;
+  height: 40px;
   background: linear-gradient(45deg, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0px 10px;
+}
+
+.App-player {
+  background-image: url(./img/3.png);
 }
 
 .App-navbar {

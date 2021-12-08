@@ -8,7 +8,7 @@ const Home = () => {
                 Character
             </h2>
             <div className="App-container App-player">
-                <img src={PlayerChar} alt="Logo" className="App-logo"/>
+                <img src={PlayerChar} alt="Logo" className="App-logo" />
                 <div className="App-container-description">
                     <h3>
                         Firion
@@ -22,10 +22,37 @@ const Home = () => {
                 </div>
             </div>
             <h2>
-                Character
+                Stats
             </h2>
-            <div className="App-container">
-                <img src={PlayerChar} alt="Logo" className="App-logo"/>
+            <div className="App-container Horizontal">
+                <div className="App-container Background-grey">
+                    <h2>
+                        Health
+                    </h2>
+                </div>
+                <div className="App-container Background-grey">
+                    <h2>
+                        Manapoints
+                    </h2>
+                </div>
+            </div>
+            <div className="App-container Horizontal Background-grey">
+                <h2>
+                    ARM INI ATB DMG
+                </h2>
+            </div>
+            <h2>
+                Effects
+            </h2>
+            <div className="App-container Horizontal Background-grey">
+                <div className="App-container-add-button">
+                    <p>
+                        Add effect +
+                    </p>
+                </div>
+                <p>
+                    No effects
+                </p>
             </div>
         </>
     );
