@@ -2,8 +2,9 @@ import React from 'react';
 import PlayerChar from './img/Bard.png'
 import UilPen from '@iconscout/react-unicons/icons/uil-pen';
 import Header from './components/Header'
+import Effects from './components/Effects';
 
-const Home = () => {
+const Home = ( {effects, onDelete} ) => {
     return (
         <>
             <Header name="Home" />
@@ -82,20 +83,31 @@ const Home = () => {
                     </h1>
                 </div>
             </div>
-            <h2>
-                Gear
-            </h2>
-            <div className="App-container Horizontal Background-grey">
-            </div>
-            <h2>
-                Effects
-            </h2>
-            <div className="App-container Horizontal Background-grey">
-                <div className="App-container-add-button Electric-violet">
+            <div className="Horizontal" style={{ marginTop: "20px" }}>
+                <h2>
+                    Equipped gear
+                </h2>
+                <div className="App-container-add-button-relative Electric-violet">
                     <p>
-                        Add effect +
+                        +
                     </p>
                 </div>
+            </div>
+            <div>
+                {effects.length > 0 ? <Effects effects={effects} onDelete={onDelete}/> : <h3>No gear equipped</h3>}
+            </div>
+            <div className="Horizontal" style={{ marginTop: "20px" }}>
+                <h2>
+                    Effects
+                </h2>
+                <div className="App-container-add-button-relative Electric-violet">
+                    <p>
+                        +
+                    </p>
+                </div>
+            </div>
+            <div>
+            {effects.length > 0 ? <Effects effects={effects} onDelete={onDelete}/> : <h3>No effects</h3>}
             </div>
         </>
     );
