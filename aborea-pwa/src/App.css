@@ -39,12 +39,56 @@ p{
   margin: 0;
 }
 
+.Electric-violet {
+  background: #4776e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #4776e6, #8e54e9); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #4776e6, #8e54e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.Health-gradient {
+  background: #DCE35B;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+.Mana-gradient {
+  background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+}
+.Damage-gradient {
+  background: #ff416c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ff416c, #ff4b2b); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ff416c, #ff4b2b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.Armor-gradient {
+  background: #36D1DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+.Initiative-gradient {
+  background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+}
 
+.Margin-right{
+  margin-right: 10px;
+}
+
+.Margin-left{
+  margin-left: 10px;
+}
 
 .App {
   text-align: left;
   font-family: 'Roboto', sans-serif;
   padding: 20px;
+}
+
+.App-main{
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 900px;
 }
 
 .App-logo {
@@ -67,14 +111,20 @@ p{
 
 .App-container {
   position: relative;
-  max-width: 400px;
   border-radius: 20px;
   display: flex;
-  margin: 20px 0;
+  flex-direction: column;
   min-height: 100px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .Horizontal {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -85,7 +135,6 @@ p{
   width: 100%;
   padding: 10px 0;
   backdrop-filter: blur(50px);
-  border-radius: 0 0 20px 20px;
   border-width: 0;
   display: flex;
   flex-direction: column;
@@ -99,16 +148,19 @@ p{
   right: 10px;
   min-width: 40px;
   height: 40px;
-  background: linear-gradient(45deg, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   padding: 0px 10px;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
 }
 
 .App-player {
-  background-image: url(./img/3.png);
+  background-image: url(./img/5.png);
+  background-size: cover;
 }
 
 .App-navbar {
@@ -147,33 +199,8 @@ p{
   display: none;
 }
 
-/* Desktop Query */
-@media only screen and (min-width: 1281px) {
-  body{
-    margin-left:250px;
-  }
-  .App-navbar {
-    top: 0;
-    height: 100vh;
-    width: 250px;
-    flex-direction: column;
-    background-color: rgb(22, 22, 30);
-    padding: 20px;
-    padding-top: 100px;
-  }
-
-  .App-navbar-button{
-    width: 200px;
-    margin: 20px 0;
-  }
-
-  .App-navbar-button-text{
-    display: inline-block;
-  }
-}
-
 /* Tablet Query */
-@media only screen and (min-width: 768px) and (max-width: 1281px) {
+@media only screen and (min-width: 768px) {
   body{
     margin-left:85px;
   }
@@ -182,7 +209,7 @@ p{
     height: 100vh;
     width: 85px;
     flex-direction: column;
-    background-color: rgb(22, 22, 30);
+    background-color: rgb(10, 10, 10);
     padding-top: 100px;
   }
   .App-navbar-button{

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 import UilEstate from '@iconscout/react-unicons/icons/uil-estate';
