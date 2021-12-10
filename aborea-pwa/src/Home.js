@@ -4,7 +4,7 @@ import UilPen from '@iconscout/react-unicons/icons/uil-pen';
 import Header from './components/Header'
 import Effects from './components/Effects';
 
-const Home = ( {effects, onDelete} ) => {
+const Home = ( {onAddEffects, effects, gears, onDeleteEffect, onDeleteGear} ) => {
     return (
         <>
             <Header name="Home" />
@@ -89,25 +89,25 @@ const Home = ( {effects, onDelete} ) => {
                 </h2>
                 <div className="App-container-add-button-relative Electric-violet">
                     <p>
-                        +
+                        Add gear +
                     </p>
                 </div>
             </div>
             <div>
-                {effects.length > 0 ? <Effects effects={effects} onDelete={onDelete}/> : <h3>No gear equipped</h3>}
+                {gears.length > 0 ? <Effects list={gears} onDelete={onDeleteGear}/> : <h3>No gear equipped</h3>}
             </div>
             <div className="Horizontal" style={{ marginTop: "20px" }}>
                 <h2>
                     Effects
                 </h2>
-                <div className="App-container-add-button-relative Electric-violet">
+                <div className="App-container-add-button-relative Electric-violet" onClick={onAddEffects}>
                     <p>
-                        +
+                        Add effect +
                     </p>
                 </div>
             </div>
             <div>
-            {effects.length > 0 ? <Effects effects={effects} onDelete={onDelete}/> : <h3>No effects</h3>}
+            {effects.length > 0 ? <Effects list={effects} onDelete={onDeleteEffect}/> : <h3>No effects</h3>}
             </div>
         </>
     );

@@ -1,9 +1,9 @@
 import Effect from "./Effect"
 
-export const Effects = ( {effects, onDelete} ) => {
+export const Effects = ( {list, onDelete} ) => {
     return (
         <>
-            {effects.map((effect) => <Effect key={effect.id} effect={effect} onDelete={onDelete}/>)}
+            {list.map((list) => <Effect key={list.id} effect={list} onDelete={onDelete}/>)}
         </>
     )
 }

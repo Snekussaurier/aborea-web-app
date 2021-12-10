@@ -7,7 +7,7 @@ const Effect = ({ effect, onDelete }) => {
                 <UilTimes/>
             </div>
             <h3>{effect.effectName}</h3>
-            <p>{effect.effectName}</p>
+            <p>{effect.effectDescription}</p>
         </div>
     )
 }
