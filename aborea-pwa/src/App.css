@@ -24,7 +24,7 @@ h1 {
 
 h2 {
   color: white;
-  margin: 10px 0;
+  margin: 0;
 }
 
 h3 {
@@ -52,6 +52,7 @@ p{
   background: #7F00FF;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+
 }
 .Damage-gradient {
   background: #ff416c; /* fallback for old browsers */
@@ -63,18 +64,25 @@ p{
   background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
-.Initiative-gradient {
-  background: #7F00FF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+.Effect-gradient {
+  background: #ff8008; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff8008, #ffc837); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff8008, #ffc837); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .Margin-right{
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .Margin-left{
-  margin-left: 10px;
+  margin-left: 5px;
+}
+
+.Align-center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .App {
@@ -110,6 +118,7 @@ p{
 
 .App-container {
   position: relative;
+  padding: 10px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -120,6 +129,7 @@ p{
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .App-effect {
@@ -131,8 +141,19 @@ p{
   width: 100%;
   margin-top: 20px;
   overflow: hidden;
-  padding: 20px;
+  padding: 13px 50px 20px 20px;
   box-sizing: border-box;
+}
+
+.App-button{
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 20px;
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+  height: 25px;
+  width: 25px;
 }
 
 .App-form{
@@ -170,6 +191,7 @@ p{
   border-width: 0;
   margin: 10px 0;
   color: white;
+  font-size: small;
 }
 
 .App-form-input-submit{
@@ -181,6 +203,19 @@ p{
   color: white;
   margin: 10px 0;
   width: 100%;
+}
+
+.App-form-select{
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  border-width: 0;
+  color: white;
+  background-color: #141414;
+  margin: 10px 0;
+  width: 100%;
+  font-size: small;
 }
 
 .Horizontal {
@@ -195,7 +230,7 @@ p{
   bottom: 0;
   width: 100%;
   padding: 10px 0;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(25px);
   border-width: 0;
   display: flex;
   flex-direction: column;
@@ -241,6 +276,9 @@ p{
 .App-player {
   background-image: url(./img/5.png);
   background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .App-navbar {
@@ -259,7 +297,8 @@ p{
 .App-navbar-button{
   text-decoration: none;
   display: flex;
-  color: rgba(255, 255, 255, 0.7);
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);;
 }
 
 .App-navbar-button1:hover {
@@ -277,26 +316,68 @@ p{
 
 .App-navbar-button-text{
   display: none;
+  padding-left: 20px;
 }
 
 /* Tablet Query */
 @media only screen and (min-width: 768px) {
   body{
-    margin-left:85px;
+    margin-left:300px;
   }
   .App-navbar {
     top: 0;
     height: 100vh;
-    width: 85px;
+    width: 300px;
     flex-direction: column;
-    background-color: rgb(10, 10, 10);
-    padding-top: 100px;
+    align-items: baseline;
+    background-color: rgb(30, 30, 30);
+    padding: 80px 20px 20px 20px;
   }
+
+  .App-navbar::before { 
+    position: absolute; 
+    top: 0;
+    left: 300px;
+    height: 100vh;
+    width: 1px;
+    background-color: #555555;
+    content: '';
+  }
+
   .App-navbar-button{
-    margin: 20px 0;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
   }
+
+  .App-navbar-button:hover{
+    background: #ff416c; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ff416c, #ff4b2b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ff416c, #ff4b2b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+  }
+
+  .App-navbar-button-icon{
+    color: white;
+  }
+
   .App-navbar-button-text{
-    display: none;
+    display: inline-block;
+  }
+
+  .App-navbar-header{
+    display: inline-block;
+    padding-left: 5px;
+  }
+
+  .App-player {
+    max-height: 500px;
+  }
+  .App-logo {
+    width: 60%;
   }
 }
 
@@ -314,10 +395,16 @@ p{
     align-items: center;
   }
   .App-navbar-button-text{
-    display: inline-block;
+    display: none;
   }
   .App-navbar-button{
     flex-direction: column;
     align-items: center;
+  }
+  .App-navbar-button:hover{
+    color: #ff4b2b;
+  }
+  .App-navbar-header{
+    display: none;
   }
 }

@@ -3,8 +3,11 @@ import PlayerChar from './img/Bard.png'
 import UilPen from '@iconscout/react-unicons/icons/uil-pen';
 import Header from './components/Header'
 import Effects from './components/Effects';
+import Gears from './components/Gears';
+import StepperBig from './components/StepperBig';
 
-const Home = ( {onAddEffects, effects, gears, onDeleteEffect, onDeleteGear} ) => {
+const Home = ({ character, onAddEffects, onAddGear, effects, gears, onDeleteEffect, onDeleteGear }) => {
+
     return (
         <>
             <Header name="Home" />
@@ -17,37 +20,17 @@ const Home = ( {onAddEffects, effects, gears, onDeleteEffect, onDeleteGear} ) =>
                 </div>
                 <img src={PlayerChar} alt="Logo" className="App-logo" />
                 <div className="App-container-description">
-                    <h3>
-                        Firion
-                    </h3>
-                    <p>
-                        Human
-                    </p>
-                    <p>
-                        Bard
-                    </p>
+                    {character.length > 0 ? <h3>{character[0].char_name}</h3> : <h3>{"{char_name}"}</h3>}
+                    {character.length > 0 ? <p>{character[0].char_race}</p> : <p>{"{char_race}"}</p>}
+                    {character.length > 0 ? <p>{character[0].char_profession}</p> : <p>{"{char_profession}"}</p>}
                 </div>
             </div>
             <h2>
                 Stats
             </h2>
             <div className="Horizontal">
-                <div className="App-container Background-grey Margin-right Health-gradient">
-                    <p>
-                        Health
-                    </p>
-                    <h1>
-                        23
-                    </h1>
-                </div>
-                <div className="App-container Background-grey Margin-left Mana-gradient">
-                    <p>
-                        Mana
-                    </p>
-                    <h1>
-                        0
-                    </h1>
-                </div>
+                <StepperBig value={character.length > 0 ? character[0].char_health : "{char_health}"} header={"Health"} backgroundColor={"Health-gradient Margin-right"}/>
+                <StepperBig value={character.length > 0 ? character[0].char_mana : "{char_mana}"} header={"Mana"} backgroundColor={"Mana-gradient Margin-left"}/>
             </div>
             <div className="Horizontal">
                 <div className="App-container Margin-right Background-grey">
@@ -70,9 +53,7 @@ const Home = ( {onAddEffects, effects, gears, onDeleteEffect, onDeleteGear} ) =>
                     <p>
                         INI
                     </p>
-                    <h1>
-                        2
-                    </h1>
+                    {character.length > 0 ? <h1>{Math.ceil((character[0].char_dexterity - 5) / 2)}</h1> : <h1>{"{char_initative}"}</h1>}
                 </div>
                 <div className="App-container Background-grey Margin-left">
                     <p>
@@ -87,14 +68,14 @@ const Home = ( {onAddEffects, effects, gears, onDeleteEffect, onDeleteGear} ) =>
                 <h2>
                     Equipped gear
                 </h2>
-                <div className="App-container-add-button-relative Electric-violet">
+                <div className="App-container-add-button-relative Electric-violet" onClick={onAddGear}>
                     <p>
                         Add gear +
                     </p>
                 </div>
             </div>
             <div>
-                {gears.length > 0 ? <Effects list={gears} onDelete={onDeleteGear}/> : <h3>No gear equipped</h3>}
+                {gears.length > 0 ? <Gears list={gears} onDelete={onDeleteGear} /> : <h3>No gear equipped</h3>}
             </div>
             <div className="Horizontal" style={{ marginTop: "20px" }}>
                 <h2>
@@ -107,7 +88,7 @@ const Home = ( {onAddEffects, effects, gears, onDeleteEffect, onDeleteGear} ) =>
                 </div>
             </div>
             <div>
-            {effects.length > 0 ? <Effects list={effects} onDelete={onDeleteEffect}/> : <h3>No effects</h3>}
+                {effects.length > 0 ? <Effects list={effects} onDelete={onDeleteEffect} /> : <h3>No effects</h3>}
             </div>
         </>
     );

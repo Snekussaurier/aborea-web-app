@@ -9,17 +9,24 @@ import UilAnalytics from '@iconscout/react-unicons/icons/uil-analytics';
 const Navigation = () => {
     return (
         <div className="App-navbar">
-            <NavLink className="App-navbar-button App-navbar-button1" to="/">
-                <UilEstate size="28" className="App-sidenav-btn-icon" />
+            <div className="App-navbar-header">
+                <h1>Aborea</h1>
+            </div>
+            <NavLink className="App-navbar-button" to="/">
+                <UilEstate size="28" className="App-navbar-button-icon" />
+                <p className="App-navbar-button-text">Home</p>
             </NavLink>
-            <NavLink className="App-navbar-button App-navbar-button2" activeStyle={{ color: 'green' }} to="/backpack">
-                <UilBackpack size="28" className="App-sidenav-btn-icon" />
+            <NavLink className="App-navbar-button" to="/backpack">
+                <UilBackpack size="28" className="App-navbar-button-icon" />
+                <p className="App-navbar-button-text">Backpack</p>
             </NavLink>
-            <NavLink className="App-navbar-button App-navbar-button3" activeStyle={{ color: 'green' }} to="/level">
-                <UilWindow size="28" className="App-sidenav-btn-icon" />
+            <NavLink className="App-navbar-button" to="/level">
+                <UilWindow size="28" className="App-navbar-button-icon" />
+                <p className="App-navbar-button-text">Level</p>
             </NavLink>
-            <NavLink className="App-navbar-button App-navbar-button4" activeClassName="App-sidenav-btn4-active" to="/stats">
-                <UilAnalytics size="28" className="App-sidenav-btn-icon" />
+            <NavLink className="App-navbar-button" to="/stats">
+                <UilAnalytics size="28" className="App-navbar-button-icon" />
+                <p className="App-navbar-button-text">Statistic</p>
             </NavLink>
         </div>
     );

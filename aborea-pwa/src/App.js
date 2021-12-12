@@ -1,29 +1,70 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigation from "./components/Navigation";
 import Home from "./Home";
 import Backpack from './Backpack';
 import AddEffect from "./components/AddEffect";
+import AddGear from "./components/AddGear";
 import './App.css';
 
 function App() {
+  const [character, setCharacter] = useState([])
+
+  useEffect(() => {
+    const getCharacter = async () => {
+      const characterFromServer = await fetchCharacter(1)
+      setCharacter(characterFromServer)
+    }
+
+    getCharacter()
+  }, [])
+ 
+  // Fetch Character
+  const fetchCharacter = async (id) => {
+    const res = await fetch(`http://192.168.178.34:5000/api/char/${id}`)
+    const data = await res.json()
+
+    return data
+  }
+
+  // Fetch Stats
+
+  const [stats, setStats] = useState([
+    {
+      id: "DMG",
+      value: 5
+    },
+    {
+      id: "ARM",
+      value: 7
+    },
+    {
+      id: "INI",
+      value: 5
+    },
+    {
+      id: "ATB",
+      value: 7
+    }
+  ])
+
+
   const [showAddEffects, setShowAddEffects] = useState(false)
   const [effects, setEffects] = useState([
     {
       id: 1,
       effectName: "Paralyze",
-      effectDescription: "INI -1"
+      effectDescription: "",
+      effectStat: "INI",
+      effectValue: -2,
     },
     {
       id: 2,
       effectName: "Praising",
-      effectDescription: "Wahrnehmung + 1"
-    },
-    {
-      id: 3,
-      effectName: "Broken Leg",
-      effectDescription: "INI -1"
+      effectDescription: "",
+      effectStat: "ARM",
+      effectValue: +1,
     },
   ])
 
@@ -39,30 +80,40 @@ function App() {
     setEffects(effects.filter((effect) => effect.id !== id))
   }
 
+  const [showAddGear, setShowAddGear] = useState(false)
   const [gears, setGears] = useState([
     {
       id: 1,
-      effectName: "Bow",
-      effectDescription: "DMG + 1"
+      gearName: "Bow",
+      gearDescription: "The shortbow is a flexible shaft of wood with the ends connected by strong cord.",
+      value: -1,
     },
   ])
+
+  //Add gear
+  const addGear = (gear) => {
+    const id = Math.floor(Math.random() * 10000) + 1
+    const newGear = {id, ...gear}
+    setGears([...effects, newGear])
+  }
 
   // Delete gear
   const deleteGear = (id) => {
     setGears(gears.filter((gear) => gear.id !== id))
   }
-
+  
   return (
     <Router>
       <div className="App">
         <div className='App-main'>
           <Routes>
-            <Route path="/" element={<Home onAddEffects={() => setShowAddEffects(true)} effects={effects} gears={gears} onDeleteEffect={deleteEffect} onDeleteGear={deleteGear}/>} />
+            <Route path="/" element={<Home character={character} onAddEffects={() => setShowAddEffects(true)} onAddGear={() => setShowAddGear(true)} effects={effects} gears={gears} onDeleteEffect={deleteEffect} onDeleteGear={deleteGear}/>} />
             <Route path="/backpack" element={<Backpack />} />
           </Routes>
         </div>
         <Navigation />
-        {showAddEffects && <AddEffect onAdd={addEffect} onClose={() => setShowAddEffects(false)}/>}
+        {showAddEffects && <AddEffect onAdd={addEffect} onClose={() => setShowAddEffects(false)} listStats={stats}/>}
+        {showAddGear && <AddGear onAdd={addGear} onClose={() => setShowAddGear(false)}/>}
       </div>
     </Router>
   );

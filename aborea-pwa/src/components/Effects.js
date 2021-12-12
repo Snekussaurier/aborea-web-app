@@ -3,7 +3,7 @@ import Effect from "./Effect"
 export const Effects = ( {list, onDelete} ) => {
     return (
         <>
-            {list.map((list) => <Effect key={list.id} effect={list} onDelete={onDelete}/>)}
+            {list.map((listItem) => <Effect key={listItem.id} effect={listItem} onDelete={onDelete}/>)}
         </>
     )
 }
