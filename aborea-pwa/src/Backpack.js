@@ -50,6 +50,12 @@ const Backpack = () => {
             <div className="App-container Horizontal Background-grey">
 
             </div>
+            <h2>
+                Inventory
+            </h2>
+            <div className="App-container Horizontal Background-grey">
+
+            </div>
         </>
     );
 }

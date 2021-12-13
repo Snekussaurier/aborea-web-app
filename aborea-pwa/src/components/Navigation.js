@@ -5,12 +5,16 @@ import UilEstate from '@iconscout/react-unicons/icons/uil-estate';
 import UilBackpack from '@iconscout/react-unicons/icons/uil-backpack';
 import UilWindow from '@iconscout/react-unicons/icons/uil-window';
 import UilAnalytics from '@iconscout/react-unicons/icons/uil-analytics';
+import AboreaIcon from '../aborea-web-icon.png'
 
 const Navigation = () => {
     return (
         <div className="App-navbar">
             <div className="App-navbar-header">
-                <h1>Aborea</h1>
+                <img src={AboreaIcon} className="App-navbar-icon"/>
+                <h1>
+                    Aborea PWA
+                </h1>
             </div>
             <NavLink className="App-navbar-button" to="/">
                 <UilEstate size="28" className="App-navbar-button-icon" />

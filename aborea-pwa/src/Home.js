@@ -20,17 +20,17 @@ const Home = ({ character, onAddEffects, onAddGear, effects, gears, onDeleteEffe
                 </div>
                 <img src={PlayerChar} alt="Logo" className="App-logo" />
                 <div className="App-container-description">
-                    {character.length > 0 ? <h3>{character[0].char_name}</h3> : <h3>{"{char_name}"}</h3>}
-                    {character.length > 0 ? <p>{character[0].char_race}</p> : <p>{"{char_race}"}</p>}
-                    {character.length > 0 ? <p>{character[0].char_profession}</p> : <p>{"{char_profession}"}</p>}
+                    {character.length > 0 ? <h3>{character[0].char_name}</h3> : <h3>{"{empty}"}</h3>}
+                    {character.length > 0 ? <p>{character[0].char_race}</p> : <p>{"{empty}"}</p>}
+                    {character.length > 0 ? <p>{character[0].char_profession}</p> : <p>{"{empty}"}</p>}
                 </div>
             </div>
             <h2>
                 Stats
             </h2>
             <div className="Horizontal">
-                <StepperBig value={character.length > 0 ? character[0].char_health : "{char_health}"} header={"Health"} backgroundColor={"Health-gradient Margin-right"}/>
-                <StepperBig value={character.length > 0 ? character[0].char_mana : "{char_mana}"} header={"Mana"} backgroundColor={"Mana-gradient Margin-left"}/>
+                <StepperBig value={character.length > 0 ? character[0].char_health : "{empty}"} header={"Health"} backgroundColor={"Health-gradient Margin-right"}/>
+                <StepperBig value={character.length > 0 ? character[0].char_mana : "{empty}"} header={"Mana"} backgroundColor={"Mana-gradient Margin-left"}/>
             </div>
             <div className="Horizontal">
                 <div className="App-container Margin-right Background-grey">
@@ -53,7 +53,7 @@ const Home = ({ character, onAddEffects, onAddGear, effects, gears, onDeleteEffe
                     <p>
                         INI
                     </p>
-                    {character.length > 0 ? <h1>{Math.ceil((character[0].char_dexterity - 5) / 2)}</h1> : <h1>{"{char_initative}"}</h1>}
+                    {character.length > 0 ? <h1>{Math.ceil((character[0].char_dexterity - 5) / 2)}</h1> : <h1>{"{empty}"}</h1>}
                 </div>
                 <div className="App-container Background-grey Margin-left">
                     <p>
@@ -68,7 +68,7 @@ const Home = ({ character, onAddEffects, onAddGear, effects, gears, onDeleteEffe
                 <h2>
                     Equipped gear
                 </h2>
-                <div className="App-container-add-button-relative Electric-violet" onClick={onAddGear}>
+                <div className="App-container-add-button-relative Electric-violet" onClick={onAddGear} curs>
                     <p>
                         Add gear +
                     </p>
