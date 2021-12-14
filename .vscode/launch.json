@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/AboreaWebApi/AboreaWebApi/bin/Debug/net5.0/AboreaWebApi.dll",
+            "program": "${workspaceFolder}/aborea-web-api/bin/Debug/net5.0/AboreaWebApi.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/AboreaWebApi/AboreaWebApi",
+            "cwd": "${workspaceFolder}/aborea-web-api",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {

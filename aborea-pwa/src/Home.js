@@ -26,7 +26,7 @@ const Home = ({ character, setCharacter, updateCharacter, onAddEffects, onAddGea
         updateCharacter()
     }
     const decrementMana = () => {
-        if (character.char_health > 0) {
+        if (character.char_mana > 0) {
             setCharacter({ ...character, char_mana: character.char_mana - 1 })
             updateCharacter()
         }
@@ -46,9 +46,9 @@ const Home = ({ character, setCharacter, updateCharacter, onAddEffects, onAddGea
                 </div>
                 <img src={PlayerChar} alt="Logo" className="App-logo" />
                 <div className="App-container-description">
-                    {character.length > 0 ? <h3>{character[0].char_name}</h3> : <h3>{"{empty}"}</h3>}
-                    {character.length > 0 ? <p>{character[0].char_race}</p> : <p>{"{empty}"}</p>}
-                    {character.length > 0 ? <p>{character[0].char_profession}</p> : <p>{"{empty}"}</p>}
+                    <h3>{character.char_name}</h3>
+                    <p>{character.char_race}</p>
+                    <p>{character.char_profession}</p>
                 </div>
             </div>
             <h2>
@@ -64,7 +64,7 @@ const Home = ({ character, setCharacter, updateCharacter, onAddEffects, onAddGea
                         DMG
                     </p>
                     <h1>
-                        1
+                        -2
                     </h1>
                 </div>
                 <div className="App-container Margin-right Margin-left Background-grey">
@@ -72,21 +72,21 @@ const Home = ({ character, setCharacter, updateCharacter, onAddEffects, onAddGea
                         ARM
                     </p>
                     <h1>
-                        0
+                        5
                     </h1>
                 </div>
                 <div className="App-container Margin-right Margin-left Background-grey">
                     <p>
                         INI
                     </p>
-                    {character.length > 0 ? <h1>{Math.ceil((character[0].char_dexterity - 5) / 2)}</h1> : <h1>{"{empty}"}</h1>}
+                    <h1>{Math.ceil((character.char_dexterity - 5) / 2)}</h1>
                 </div>
                 <div className="App-container Background-grey Margin-left">
                     <p>
                         ATB
                     </p>
                     <h1>
-                        5
+                        1
                     </h1>
                 </div>
             </div>

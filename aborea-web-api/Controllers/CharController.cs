@@ -55,7 +55,7 @@ namespace AboreaWebApi.Controllers
                 myCon.Open();
                 using (NpgsqlCommand myCommand = new NpgsqlCommand(query, myCon))
                 {
-                    myCommand.Parameters.AddWithValue("@CharName", character.CharName);
+                    myCommand.Parameters.AddWithValue("@CharName", character.Char_Name);
                     myReader = myCommand.ExecuteReader();
                     datatable.Load(myReader);
 
@@ -68,28 +68,31 @@ namespace AboreaWebApi.Controllers
             return new JsonResult("Succesfully added Char");
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public JsonResult Put(Character character)
         {
-            string query = @"update Char 
-                                set char_name = @charname
-                                set char_race = @charrace
-                                set char_profession = @charprofession
-                                set char_ep = @charep
-                                set char_dp = @chardp
-                                set char_strength = @charstrength
-                                set char_dexterity = @chardexterity
-                                set char_constitution = @charconstitution
-                                set char_intelligence = @charintelligence
-                                set char_charisma = @charcharisma
-                                set char_athletic = @charathlethic
-                                set char_influence = @charinfluence
-                                set char_targeted_spell = @chartargetedspell
-                                set char_cunning = @charcunning
-                                set char_develop_magic = @chardevelopmagic
-                                set char_nature = @charnature
-                                set char_horse_riding = @charhorseriding
-                                where id = @charid";
+
+            string query = @"update character 
+                                set char_name = @charname,
+                                    char_race = @charrace,
+                                    char_profession = @charprofession, 
+                                    char_ep = @charep,
+                                    char_dp = @chardp,
+                                    char_health = @charhealth,
+                                    char_mana = @charmana,
+                                    char_strength = @charstrength,
+                                    char_dexterity = @chardexterity,
+                                    char_constitution = @charconstitution,
+                                    char_intelligence = @charintelligence,
+                                    char_charisma = @charcharisma,
+                                    char_athletic = @charathletic,
+                                    char_influence = @charinfluence,
+                                    char_targeted_spell = @chartargetedspell,
+                                    char_cunning = @charcunning,
+                                    char_develop_magic = @chardevelopmagic,
+                                    char_nature = @charnature,
+                                    char_horse_riding = @charhorseriding
+                                where id = @id";
 
             DataTable datatable = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("AboreaAppCon");
@@ -100,22 +103,25 @@ namespace AboreaWebApi.Controllers
                 using (NpgsqlCommand myCommand = new NpgsqlCommand(query, myCon))
                 {
                     myCommand.Parameters.AddWithValue("@id", character.Id);
-                    myCommand.Parameters.AddWithValue("@charname", character.CharName);
-                    myCommand.Parameters.AddWithValue("@charrace", character.CharRace);
-                    myCommand.Parameters.AddWithValue("@charep", character.CharEp);
-                    myCommand.Parameters.AddWithValue("@chardp", character.CharDp);
-                    myCommand.Parameters.AddWithValue("@charstrength", character.CharStrength);
-                    myCommand.Parameters.AddWithValue("@chardexterity", character.CharDexterity);
-                    myCommand.Parameters.AddWithValue("@charconstitution", character.CharConstitution);
-                    myCommand.Parameters.AddWithValue("@charintelligence", character.CharIntelligence);
-                    myCommand.Parameters.AddWithValue("@charcharisma", character.CharCharisma);
-                    myCommand.Parameters.AddWithValue("@charathletic", character.CharAthletic);
-                    myCommand.Parameters.AddWithValue("@charinfluence", character.CharInfluence);
-                    myCommand.Parameters.AddWithValue("@chartargetedspell", character.CharTargetedSpell);
-                    myCommand.Parameters.AddWithValue("@charcunning", character.CharCunning);
-                    myCommand.Parameters.AddWithValue("@chardevelopmagic", character.CharDevelopMagic);
-                    myCommand.Parameters.AddWithValue("@charnature", character.CharNature);
-                    myCommand.Parameters.AddWithValue("@charhorseriding", character.CharHorseRiding);
+                    myCommand.Parameters.AddWithValue("@charname", character.Char_Name);
+                    myCommand.Parameters.AddWithValue("@charrace", character.Char_Race);
+                    myCommand.Parameters.AddWithValue("@charprofession", character.Char_Profession);
+                    myCommand.Parameters.AddWithValue("@charep", character.Char_Ep);
+                    myCommand.Parameters.AddWithValue("@chardp", character.Char_Dp);
+                    myCommand.Parameters.AddWithValue("@charhealth", character.Char_Health);
+                    myCommand.Parameters.AddWithValue("@charmana", character.Char_Mana);
+                    myCommand.Parameters.AddWithValue("@charstrength", character.Char_Strength);
+                    myCommand.Parameters.AddWithValue("@chardexterity", character.Char_Dexterity);
+                    myCommand.Parameters.AddWithValue("@charconstitution", character.Char_Constitution);
+                    myCommand.Parameters.AddWithValue("@charintelligence", character.Char_Intelligence);
+                    myCommand.Parameters.AddWithValue("@charcharisma", character.Char_Charisma);
+                    myCommand.Parameters.AddWithValue("@charathletic", character.Char_Athletic);
+                    myCommand.Parameters.AddWithValue("@charinfluence", character.Char_Influence);
+                    myCommand.Parameters.AddWithValue("@chartargetedspell", character.Char_Targeted_Spell);
+                    myCommand.Parameters.AddWithValue("@charcunning", character.Char_Cunning);
+                    myCommand.Parameters.AddWithValue("@chardevelopmagic", character.Char_Develop_Magic);
+                    myCommand.Parameters.AddWithValue("@charnature", character.Char_Nature);
+                    myCommand.Parameters.AddWithValue("@charhorseriding", character.Char_Horse_Riding);
                     myReader = myCommand.ExecuteReader();
                     datatable.Load(myReader);
 

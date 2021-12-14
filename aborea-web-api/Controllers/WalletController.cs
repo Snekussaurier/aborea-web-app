@@ -19,7 +19,7 @@ namespace AboreaWebApi.Controllers
         [HttpGet("{id}")]
         public JsonResult Get(int id)
         {
-            string query = @"SELECT * FROM wallet WHERE id = @id";
+            string query = @"SELECT * FROM wallet WHERE owner_id = @id";
 
             DataTable datatable = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("AboreaAppCon");
@@ -67,7 +67,7 @@ namespace AboreaWebApi.Controllers
             return new JsonResult("Succesfully added Char");
         }*/
 
-        [HttpPut]
+        [HttpPut ]
         public JsonResult Put(Wallet wallet)
         {
             string query = @"update wallet
