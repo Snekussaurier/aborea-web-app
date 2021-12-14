@@ -11,7 +11,7 @@ const Navigation = () => {
     return (
         <div className="App-navbar">
             <div className="App-navbar-header">
-                <img src={AboreaIcon} className="App-navbar-icon"/>
+                <img src={AboreaIcon} className="App-navbar-icon" alt="Aborea PWA Logo"/>
                 <h1>
                     Aborea PWA
                 </h1>

@@ -4,30 +4,81 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigation from "./components/Navigation";
 import Home from "./Home";
 import Backpack from './Backpack';
+import Level from "./Level";
+import Statistic from "./Statistic";
 import AddEffect from "./components/AddEffect";
 import AddGear from "./components/AddGear";
 import './App.css';
 
 function App() {
+  const id = 1;
+
+  // CHARACTER
   const [character, setCharacter] = useState([])
 
   useEffect(() => {
     const getCharacter = async () => {
-      const characterFromServer = await fetchCharacter(1)
+      const characterFromServer = await fetchCharacter(id)
       setCharacter(characterFromServer)
     }
 
     getCharacter()
   }, [])
- 
+
   // Fetch Character
-  const fetchCharacter = async (id) => {
+  const fetchCharacter = async () => {
     const res = await fetch(`http://192.168.178.34:5000/api/char/${id}`)
     const data = await res.json()
+    const char = await data[0]
 
-    return data
+    return char
   }
 
+  // Update Character
+  const updateCharacter = async () => {
+    await fetch(`http://192.168.178.34:5000/api/char/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(character)
+    })
+  }
+
+
+  //WALLET
+  const [wallet, setWallet] = useState([])
+
+  useEffect(() => {
+    const getWallet = async () => {
+      const walletFromServer = await fetchWallet(id)
+      setWallet(walletFromServer)
+    }
+
+    getWallet()
+  }, [])
+
+  // Fetch Wallet
+  const fetchWallet= async () => {
+    const res = await fetch(`http://192.168.178.34:5000/api/wallet/${id}`)
+    const data = await res.json()
+    const wallet = await data[0]
+
+    return wallet
+  }
+
+  // Update Wallet
+  const updateWallet = async () => {
+    await fetch(`http://192.168.178.34:5000/api/wallet/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(wallet)
+    })
+  }
+
+  
   // Fetch Stats
 
   const [stats, setStats] = useState([
@@ -71,7 +122,7 @@ function App() {
   //Add effect
   const addEffect = (effect) => {
     const id = Math.floor(Math.random() * 10000) + 1
-    const newEffect = {id, ...effect}
+    const newEffect = { id, ...effect }
     setEffects([...effects, newEffect])
   }
 
@@ -93,7 +144,7 @@ function App() {
   //Add gear
   const addGear = (gear) => {
     const id = Math.floor(Math.random() * 10000) + 1
-    const newGear = {id, ...gear}
+    const newGear = { id, ...gear }
     setGears([...effects, newGear])
   }
 
@@ -101,19 +152,21 @@ function App() {
   const deleteGear = (id) => {
     setGears(gears.filter((gear) => gear.id !== id))
   }
-  
+
   return (
     <Router>
       <div className="App">
         <div className='App-main'>
           <Routes>
-            <Route path="/" element={<Home character={character} onAddEffects={() => setShowAddEffects(true)} onAddGear={() => setShowAddGear(true)} effects={effects} gears={gears} onDeleteEffect={deleteEffect} onDeleteGear={deleteGear}/>} />
+            <Route path="/" element={<Home character={character} setCharacter={setCharacter} updateCharacter={updateCharacter} onAddEffects={() => setShowAddEffects(true)} onAddGear={() => setShowAddGear(true)} effects={effects} gears={gears} onDeleteEffect={deleteEffect} onDeleteGear={deleteGear} />} />
             <Route path="/backpack" element={<Backpack />} />
+            <Route path="/level" element={<Level />} />
+            <Route path="/stats" element={<Statistic />} />
           </Routes>
         </div>
         <Navigation />
-        {showAddEffects && <AddEffect onAdd={addEffect} onClose={() => setShowAddEffects(false)} listStats={stats}/>}
-        {showAddGear && <AddGear onAdd={addGear} onClose={() => setShowAddGear(false)}/>}
+        {showAddEffects && <AddEffect onAdd={addEffect} onClose={() => setShowAddEffects(false)} listStats={stats} />}
+        {showAddGear && <AddGear onAdd={addGear} onClose={() => setShowAddGear(false)} />}
       </div>
     </Router>
   );

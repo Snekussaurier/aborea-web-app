@@ -6,8 +6,34 @@ import Effects from './components/Effects';
 import Gears from './components/Gears';
 import StepperBig from './components/StepperBig';
 
-const Home = ({ character, onAddEffects, onAddGear, effects, gears, onDeleteEffect, onDeleteGear }) => {
+const Home = ({ character, setCharacter, updateCharacter, onAddEffects, onAddGear, effects, gears, onDeleteEffect, onDeleteGear }) => {
 
+    // Update Health
+    const incrementHealth = () => {
+        setCharacter({ ...character, char_health: character.char_health + 1 })
+        updateCharacter()
+    }
+    const decrementHealth = () => {
+        if (character.char_health > 0) {
+            setCharacter({ ...character, char_health: character.char_health - 1 })
+            updateCharacter()
+        }
+    }
+
+    // Update Mana
+    const incrementMana = () => {
+        setCharacter({ ...character, char_mana: character.char_mana + 1 })
+        updateCharacter()
+    }
+    const decrementMana = () => {
+        if (character.char_health > 0) {
+            setCharacter({ ...character, char_mana: character.char_mana - 1 })
+            updateCharacter()
+        }
+    }
+
+
+    // return
     return (
         <>
             <Header name="Home" />
@@ -29,8 +55,8 @@ const Home = ({ character, onAddEffects, onAddGear, effects, gears, onDeleteEffe
                 Stats
             </h2>
             <div className="Horizontal">
-                <StepperBig value={character.length > 0 ? character[0].char_health : "{empty}"} header={"Health"} backgroundColor={"Health-gradient Margin-right"}/>
-                <StepperBig value={character.length > 0 ? character[0].char_mana : "{empty}"} header={"Mana"} backgroundColor={"Mana-gradient Margin-left"}/>
+                <StepperBig value={character.char_health} header={"Health"} backgroundColor={"Health-gradient Margin-right"} onIncrement={incrementHealth} onDecrement={decrementHealth} />
+                <StepperBig value={character.char_mana} header={"Mana"} backgroundColor={"Mana-gradient Margin-left"} onIncrement={incrementMana} onDecrement={decrementMana}/>
             </div>
             <div className="Horizontal">
                 <div className="App-container Margin-right Background-grey">

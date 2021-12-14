@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from './components/Header'
+import StepperBig from './components/StepperBig';
 
-const Backpack = () => {
+const Backpack = (character, setCharacter) => {
     return (
         <>
             <Header name="Backpack"/>
@@ -9,40 +10,12 @@ const Backpack = () => {
                 Money
             </h2>
             <div className="Horizontal">
-                <div className="App-container Background-grey Margin-right Health-gradient">
-                    <p>
-                        Goldfalken
-                    </p>
-                    <h1>
-                        11
-                    </h1>
-                </div>
-                <div className="App-container Background-grey Margin-left Mana-gradient">
-                    <p>
-                        Triontaler
-                    </p>
-                    <h1>
-                        4
-                    </h1>
-                </div>
+                <StepperBig header="Goldfalken" value="11" backgroundColor={"Background-grey Margin-right"}/>
+                <StepperBig header="Triontaler" value="7" backgroundColor={"Background-grey Margin-left"}/>
             </div>
             <div className="Horizontal">
-                <div className="App-container Background-grey Margin-right Damage-gradient">
-                    <p>
-                        Kupferlinge
-                    </p>
-                    <h1>
-                        8
-                    </h1>
-                </div>
-                <div className="App-container Background-grey Margin-left Armor-gradient">
-                    <p>
-                        Muena
-                    </p>
-                    <h1>
-                        5
-                    </h1>
-                </div>
+                <StepperBig header="Kupferlinge" value="3" backgroundColor={"Background-grey Margin-right"}/>
+                <StepperBig header="Muena" value="4" backgroundColor={"Background-grey Margin-left"}/>
             </div>
             <h2>
                 Backpack size
