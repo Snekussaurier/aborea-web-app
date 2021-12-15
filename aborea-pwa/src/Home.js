@@ -94,7 +94,7 @@ const Home = ({ character, setCharacter, updateCharacter, onAddEffects, onAddGea
                 <h2>
                     Equipped gear
                 </h2>
-                <div className="App-container-add-button-relative Electric-violet" onClick={onAddGear} curs>
+                <div className="App-container-add-button-relative Electric-violet" onClick={onAddGear}>
                     <p>
                         Add gear +
                     </p>

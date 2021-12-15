@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigation from "./components/Navigation";
 import Home from "./Home";
 import Backpack from './Backpack';
@@ -22,7 +22,13 @@ function App() {
       setCharacter(characterFromServer)
     }
 
+    const getWallet = async () => {
+      const walletFromServer = await fetchWallet(id)
+      setWallet(walletFromServer)
+    }
+
     getCharacter()
+    getWallet()
   }, [])
 
   // Fetch Character
@@ -82,22 +88,78 @@ function App() {
   
   // Fetch Stats
 
-  const [stats, setStats] = useState([
+  const [backpack, setBackpack] = useState([
     {
-      id: "DMG",
-      value: 5
+      id: 1,
+      itemName: "Bow",
+      itemClass: "Weapon",
+      ammount: 1
     },
     {
-      id: "ARM",
-      value: 7
+      id: 2,
+      itemName: "Fackel",
+      itemClass: "Item",
+      ammount: 1
     },
     {
-      id: "INI",
-      value: 5
+      id: 3,
+      itemName: "Wein",
+      itemClass: "Drink",
+      ammount: 3
     },
     {
-      id: "ATB",
-      value: 7
+      id: 4,
+      itemName: "Flöte",
+      itemClass: "Item",
+      ammount: 1
+    },
+    {
+      id: 5,
+      itemName: "Haltbare Nahrung",
+      itemClass: "Food",
+      ammount: 2
+    },
+    {
+      id: 6,
+      itemName: "Elefantenfigur",
+      itemClass: "Item",
+      ammount: 1
+    },
+    {
+      id: 7,
+      itemName: "Bow",
+      itemClass: "Weapon",
+      ammount: 1
+    },
+    {
+      id: 8,
+      itemName: "Fackel",
+      itemClass: "Item",
+      ammount: 1
+    },
+    {
+      id: 9,
+      itemName: "Wein",
+      itemClass: "Drink",
+      ammount: 3
+    },
+    {
+      id: 10,
+      itemName: "Flöte",
+      itemClass: "Item",
+      ammount: 1
+    },
+    {
+      id: 11,
+      itemName: "Haltbare Nahrung",
+      itemClass: "Food",
+      ammount: 2
+    },
+    {
+      id: 12,
+      itemName: "Elefantenfigur",
+      itemClass: "Item",
+      ammount: 1
     }
   ])
 
@@ -160,13 +222,13 @@ function App() {
         <div className='App-main'>
           <Routes>
             <Route path="/" element={<Home character={character} setCharacter={setCharacter} updateCharacter={updateCharacter} onAddEffects={() => setShowAddEffects(true)} onAddGear={() => setShowAddGear(true)} effects={effects} gears={gears} onDeleteEffect={deleteEffect} onDeleteGear={deleteGear} />} />
-            <Route path="/backpack" element={<Backpack />} />
+            <Route path="/backpack" element={<Backpack backpack={backpack}/>} />
             <Route path="/level" element={<Level />} />
             <Route path="/stats" element={<Statistic />} />
           </Routes>
         </div>
         <Navigation />
-        {showAddEffects && <AddEffect onAdd={addEffect} onClose={() => setShowAddEffects(false)} listStats={stats} />}
+        {showAddEffects && <AddEffect onAdd={addEffect} onClose={() => setShowAddEffects(false)} />}
         {showAddGear && <AddGear onAdd={addGear} onClose={() => setShowAddGear(false)} />}
       </div>
     </Router>

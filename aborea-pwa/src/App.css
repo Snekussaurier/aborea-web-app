@@ -38,6 +38,26 @@ p{
   margin: 0;
 }
 
+table {
+  color: white;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+tr {
+  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  transition: all 0.2s;
+}
+tr:hover{
+  background-color: #222222;
+}
+
+td {
+  padding: 12px 0;
+}
+
 .Electric-violet {
   background: #4776e6; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #4776e6, #8e54e9); /* Chrome 10-25, Safari 5.1-6 */
@@ -105,7 +125,7 @@ p{
 }
 
 .App-header {
-  font-size: x-large;
+  font-size: calc(0.8vmin + 16px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;

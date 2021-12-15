@@ -1,6 +1,6 @@
 import Gear from "./Gear"
 
-export const Effects = ( {list, onDelete} ) => {
+export const Gears = ( {list, onDelete} ) => {
     return (
         <>
             {list.map((list) => <Gear key={list.id} gear={list} onDelete={onDelete}/>)}
@@ -8,4 +8,4 @@ export const Effects = ( {list, onDelete} ) => {
     )
 }
 
-export default Effects
+export default Gears

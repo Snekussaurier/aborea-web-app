@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from './components/Header'
 import StepperBig from './components/StepperBig';
+import UilTrash from '@iconscout/react-unicons/icons/uil-trash';
 
-const Backpack = (character, setCharacter) => {
+const Backpack = ({backpack}) => {
     return (
         <>
             <Header name="Backpack"/>
@@ -23,12 +24,19 @@ const Backpack = (character, setCharacter) => {
             <div className="App-container Horizontal Background-grey">
 
             </div>
-            <h2>
-                Inventory
-            </h2>
-            <div className="App-container Horizontal Background-grey">
-
+            <div className="Horizontal" style={{ marginTop: "20px" }}>
+                <h2>
+                    Inventory
+                </h2>
+                <div className="App-container-add-button-relative Electric-violet">
+                    <p>
+                        Add item +
+                    </p>
+                </div>
             </div>
+            <table>
+                {backpack.length > 0 ? backpack.map((item) => <tr><td><div className='Armor-gradient' style={{width: '30px', height: '30px', borderRadius: '5px'}}/></td><td>{item.itemName}</td><td>X {item.ammount}</td><td><UilTrash style={{color: "#ff416c"}}/></td></tr>) : <h3>Inventory is empty</h3>}
+            </table>
         </>
     );
 }
