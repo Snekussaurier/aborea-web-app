@@ -1,13 +1,17 @@
 import React from 'react';
 import Header from './components/Header'
+import ProgressBar from './components/ProgressBar';
 
-const Level = () => {
+const Level = (character, setCharacter) => {
+
+    const testData = {backgroundColor: 'linear-gradient(to left, #4776e6, #8e54e9)', value: 50}
+
     return (
         <>
             <Header name="Level" />
             <div className="Horizontal" style={{ marginTop: "20px" }}>
                 <h2>
-                    Progressbar
+                    Progress
                 </h2>
                 <div className="App-container-add-button-relative Electric-violet">
                     <p>
@@ -16,16 +20,11 @@ const Level = () => {
                 </div>
             </div>
             <div className="App-container Background-grey Margin-right Horizontal">
-                <div className="App-container Electric-violet">
-
-                </div>
-                <div>
+                <ProgressBar value={testData.value} backgroundColor={testData.backgroundColor}/>
+                <div className='App-container-size'>
                     <p>
-                        Exp:
+                        Level
                     </p>
-                    <h3>
-                        123
-                    </h3>
                     <h1>
                         3
                     </h1>

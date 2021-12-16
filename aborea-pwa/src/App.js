@@ -223,7 +223,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home character={character} setCharacter={setCharacter} updateCharacter={updateCharacter} onAddEffects={() => setShowAddEffects(true)} onAddGear={() => setShowAddGear(true)} effects={effects} gears={gears} onDeleteEffect={deleteEffect} onDeleteGear={deleteGear} />} />
             <Route path="/backpack" element={<Backpack backpack={backpack}/>} />
-            <Route path="/level" element={<Level />} />
+            <Route path="/level" element={<Level character={character} setCharacter={setCharacter}/>} />
             <Route path="/stats" element={<Statistic />} />
           </Routes>
         </div>

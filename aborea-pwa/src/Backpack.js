@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header'
 import StepperBig from './components/StepperBig';
 import UilTrash from '@iconscout/react-unicons/icons/uil-trash';
+import ProgressBar from './components/ProgressBar';
 
 const Backpack = ({backpack}) => {
     return (
@@ -22,7 +23,7 @@ const Backpack = ({backpack}) => {
                 Backpack size
             </h2>
             <div className="App-container Horizontal Background-grey">
-
+                <ProgressBar value={69} backgroundColor={"linear-gradient(to left, #4776e6, #8e54e9)"}/>
             </div>
             <div className="Horizontal" style={{ marginTop: "20px" }}>
                 <h2>
