@@ -1,22 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "jDXX9JlfUpgfzbRco32jFZfi7LzKX0ecU2wXbvALJKaCaWFvLZaZJ2Rx5QTI968GRY2Ekw8HHwXprlFB8U+iJw==",
+  "dgSpecHash": "Qbm+6S8YVCwQTTfLV9PMsB0gbWbduU8/eVd4dEZXvzxXDsRuhWZiV+JgaXWwhH5IE9p5e8253wovWoaPj+8D2A==",
   "success": true,
-  "projectFilePath": "E:\\sccs\\repos\\aboreawebapp\\aborea-web-api\\AboreaWebApi.csproj",
+  "projectFilePath": "C:\\sccs\\dev\\aboreawebapp\\aborea-web-api\\AboreaWebApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\valen\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.12\\microsoft.aspnetcore.jsonpatch.5.0.12.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.12\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.12.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\npgsql\\5.0.10\\npgsql.5.0.10.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
-    "C:\\Users\\valen\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    "C:\\Users\\schiffl\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.12\\microsoft.aspnetcore.jsonpatch.5.0.12.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.12\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.12.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\npgsql\\5.0.10\\npgsql.5.0.10.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\schiffl\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }

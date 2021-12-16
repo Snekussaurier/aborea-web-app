@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ilNwZG5s8rmf/3oAMf8V7MvTQktfqcx5KIXlvdzxrHI=",
+  "Source": "AboreaWebApi",
+  "BasePath": "_content/AboreaWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
